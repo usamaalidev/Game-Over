@@ -1,0 +1,30 @@
+.gameDetails{
+
+  h1{
+    font-size: 35px;
+    color: var(--main-red);
+    font-family: var(--family-acme);
+  }
+  h3{
+    color: var(--mid-gray);
+    font-weight: 700;
+  }
+
+  .infoContainer{
+  width: 100%;
+  background-color: #2725256c;
+  box-shadow: 0px 0px 5px 0px var(--main-blue) inset;
+  padding: 10px 15px;
+  border-radius: 10px;
+  :nth-child(1){
+    color: var(--mid-gray);
+    font-size: 14px;
+  }
+  :nth-child(2){
+    // color: var(--main-blue);
+    font-size: 18px;
+  }
+}
+}
+
+

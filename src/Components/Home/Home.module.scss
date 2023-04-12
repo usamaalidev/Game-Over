@@ -1,0 +1,19 @@
+.home-header {
+  background: {
+    image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url(../../Assets/Images/Header-background.jpg);
+    size: cover;
+    position: center center;
+  }
+  .main-header {
+    font: {
+      family: var(--family-overlook);
+      size: 50px;
+    }
+    padding-block: 10px;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+}
+
