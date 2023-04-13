@@ -1,8 +1,4 @@
-import {
-  createBrowserRouter,
-  Navigate,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
 import Registration from "./Components/Registration/Registration";
@@ -15,6 +11,8 @@ import jwtDecode from "jwt-decode";
 import { useState } from "react";
 import axios from "axios";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute";
+import { Provider } from "react-redux";
+import { store } from "./Store/store.js";
 
 function App() {
   const [userData, setUserData] = useState(localStorage.getItem("token"));
@@ -82,14 +80,16 @@ function App() {
           ),
         },
 
-        // { path: "*", element: <ErrorPage /> },
+        { path: "*", element: <ErrorPage /> },
       ],
     },
   ]);
 
   return (
     <>
-      <RouterProvider router={routers} />
+      <Provider store={store}>
+        <RouterProvider router={routers} />
+      </Provider>
     </>
   );
 }

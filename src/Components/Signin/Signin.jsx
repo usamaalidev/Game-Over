@@ -29,7 +29,7 @@ export default function Signin({ decodeUserData }) {
     console.log();
     setLoading(true);
     let { data } = await axios.post(
-      "https://route-egypt-api.herokuapp.com/signin",
+      "https://sticky-note-fe.vercel.app/signin",
       user
     );
     if (data.message == "success") {
